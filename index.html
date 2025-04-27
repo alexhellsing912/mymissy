@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Missy Celeste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="audio" autoplay loop>
+        <source src="assets/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+<!-- Corazón SVG alrededor del texto -->
+<div class="corazon-container">
+    <svg viewBox="0 0 512 512" class="corazon">
+        <path d="M256 464l-16-14C118 334 48 270 48 176c0-66 54-120 120-120 39 0 74 18 96 46 22-28 57-46 96-46 66 0 120 54 120 120 0 94-70 158-192 274l-16 14z"
+              fill="none" stroke="#66d9ef" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="texto-central">My missy Celeste ily:3</div>
+</div>
+
+<!-- Lluvia de imágenes -->
+<div class="container">
+    <img src="assets/imagen1.jpeg" class="imagen" alt="Imagen 1">
+    <img src="assets/imagen4.jpeg" class="imagen" alt="Imagen 4">
+    <img src="assets/imagen2.jpeg" class="imagen" alt="Imagen 2">
+    <img src="assets/imagen6.jpeg" class="imagen" alt="Imagen 6">
+    <img src="assets/imagen7.jpeg" class="imagen" alt="Imagen 7">
+    <img src="assets/imagen8.jpeg" class="imagen" alt="Imagen 8">
+    <img src="assets/imagen9.jpeg" class="imagen" alt="Imagen 9">
+    <img src="assets/imagen3.jpeg" class="imagen" alt="Imagen 3">
+    <img src="assets/imagen10.jpeg" class="imagen" alt="Imagen 10">
+    <img src="assets/imagen11.jpeg" class="imagen" alt="Imagen 11">
+    <img src="assets/imagen12.jpeg" class="imagen" alt="Imagen 12">
+    <img src="assets/imagen13.jpeg" class="imagen" alt="Imagen 13">
+    <img src="assets/imagen14.jpeg" class="imagen" alt="Imagen 14">
+    <img src="assets/imagen15.jpeg" class="imagen" alt="Imagen 15">
+    <img src="assets/imagen5.jpeg" class="imagen" alt="Imagen 5">
+    <img src="assets/imagen16.jpeg" class="imagen" alt="Imagen 16">
+    <img src="assets/imagen17.jpeg" class="imagen" alt="Imagen 17">
+    <img src="assets/imagen18.jpeg" class="imagen" alt="Imagen 18">
+    <img src="assets/imagen19.jpeg" class="imagen" alt="Imagen 19">
+    <img src="assets/imagen20.jpeg" class="imagen" alt="Imagen 20">
+    <img src="assets/imagen21.jpeg" class="imagen" alt="Imagen 21">
+    <img src="assets/imagen22.jpeg" class="imagen" alt="Imagen 22">
+    <img src="assets/imagen23.jpeg" class="imagen" alt="Imagen 23">
+    <img src="assets/imagen24.jpeg" class="imagen" alt="Imagen 24">
+    <img src="assets/imagen25.jpeg" class="imagen" alt="Imagen 25">
+</div>
+
+<script>
+    // Intentar reproducir música automáticamente
+    window.addEventListener('load', function() {
+        const audio = document.getElementById('audio');
+        audio.muted = false;
+        audio.play().catch(() => {
+            // Si falla el autoplay, pedir al usuario un toque
+            document.body.addEventListener('click', () => {
+                audio.play();
+            }, { once: true });
+        });
+    });
+    </script>
+
+</body>
+</html>
